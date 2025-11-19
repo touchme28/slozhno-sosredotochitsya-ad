@@ -2,7 +2,16 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+
   /* background-color: var(--bg-color); */
+
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  padding: 10px;
 }
 
 .header {
@@ -11,11 +20,52 @@
   grid-template-rows: repeat(auto-fit, min-content);
   gap: 31px; /* непонятные отступы между элементами grid сетки */
 
-  background-image: url(../images/cover-image-dark.png);
-  /* background-repeat: no-repeat;
+  margin-block-end: 40px;
+  /* background-image: var(--bg-image);
   background-position: center;
-  object-fit: cover; */
-  padding: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__theme-menu-item{
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: var(--main-font-size);
+  color: var(--accent-color);
+}
+
+.header__theme-menu-list .header__theme-menu-item:not(:last-child){
+  margin-block-end: 10px; /* отсуп между пунктами списка */
+}
+
+.header__theme-menu-button{
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+}
+
+/*
+.header__theme-menu-button:hover{
+
+}
+
+.header__theme-menu-button:focus{
+  outline:none;
+}
+
+.header__theme-menu-button:focus-visible{
+
+}
+*/
+
+.header__theme-menu-button_active{
+  pointer-events: none;
+  outline: 1px solid var(--accent-color);
 }
 
 .decorated-zone::before {
@@ -48,7 +98,7 @@
   color: var(--accent-color);
   font-family: var(--main-font);
   font-weight: 400;
-  font-size: 18px;
+  font-size: var(--main-font-size);
   line-height: 25px;
 }
 
@@ -68,12 +118,15 @@
   box-shadow: 0px 0px 4px 2px var(--accent-color);
 }
 
-.header__title {
+.main__title {
   color: #DB00FF;
   font-family: var(--main-font);
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
+}
+
+.header__title {
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
@@ -84,8 +137,97 @@
 .header__text {
   font-family: var(--main-font);
   font-weight: 700;
-  font-size: 18px;
-  line-height: 23.4px;
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
   color: var(--bg-color);
 }
 
+.section__title {
+  color: var(--accent-color);
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
+
+}
+
+.section__point {
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
+  color: var(--bg-color);
+}
+
+.section__text {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
+  color: var(--main-color);
+}
+
+.section__link {
+  text-shadow: 2px 1px 0 var(--accent-color);
+}
+
+.margin-for-sections {
+  margin-block-end: 50px;
+}
+
+.section__why {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fill,min-content);
+  gap:10px;
+}
+
+.section__what {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fill,min-content);
+  gap:10px;
+}
+
+.section__how {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fill,min-content);
+  gap:10px;
+}
+
+.section__how .section__point:not(:first-of-type){
+  font-weight: 400;
+}
+
+.section__pictures .section__point {
+  margin-block-end: 10px; /* отступ отдельному заголовку в секции с картинками */
+}
+
+.pictures {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:min-content 355px 237px;
+  grid-auto-rows: 355px 237px;
+  gap:10px;
+}
+
+.picture {
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.footer {
+  margin-block-start: 40px;
+  block-size: 100%;
+  inline-size: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, min-content);
+  gap: 250px; /* непонятные отступы между элементами grid сетки */
+}
+
+.footer__title {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}

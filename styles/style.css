@@ -16,7 +16,7 @@
   grid-template-rows: repeat(5, min-content);
   gap: var(--header-gap); /* отступы между элементами grid сетки */
 
-  /* margin-block-end: var(--section-margin);  */
+  margin-block-end: var(--section-margin);
 }
 
 .header__theme-menu {
@@ -312,7 +312,7 @@
   .header__theme-menu-list {
     display:flex;
     gap:10px;
-    margin-block-start: -120px;
+    margin-block-start: -145px;
   }
 
   .header__theme-menu {

@@ -17,7 +17,7 @@
 
   --section-margin: 40px;
   --page-padding: 10px;
-  --header-gap: 48px; /* 31px */
+  --header-gap: 53px; /* 31px */
   --footer-gap: 250px;
   --rec-decor-top: 10px;
   --rec-decor-right: 19px;
@@ -28,7 +28,7 @@
     --main-block-size: 1024px;
     --section-margin:60px;
     --page-padding: 20px;
-    --header-gap: 150px; /* 138px */
+    --header-gap: 162px; /* 138px */
     --footer-gap: 417px;
     --header-title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     --rec-decor-top: 20px;
@@ -39,7 +39,7 @@
 @media (width >=1024px) {
   :root {
     --main-block-size: 768px;
-    --header-gap: 119px; /* 89px */
-    --footer-gap: 274px;
+    --header-gap: 130px; /* 89px */
+    --footer-gap: 310px;
   }
 }

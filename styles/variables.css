@@ -3,13 +3,41 @@
   и их переопределение под различные устройства
 */
 :root {
-  --bg-color: #000028;
-  --main-color: #F1B2CE;
-  --accent-color: #FF0070;
+  --title-color: #FF0070;
+  --bg-color: #FF0070;
+  --point-color: #000028;
+  --text-color: #F1B2CE;
+  --main-title-color: #DB00FF;
+
   --main-font: 'IBM Plex Mono';
   --main-font-size: 18px;
+  --header-title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 
   --main-line-height: 23.4px;
 
   --bg-image: url(../images/cover-image-dark.png);
+
+  --page-padding: 10px;
+  --header-gap: 31px;
+  --footer-gap: 250px;
+  --rec-decor-top: 10px;
+  --rec-decor-right: 19px;
+}
+
+@media (width >=768px) {
+  :root{
+    --page-padding: 20px;
+    --header-gap: 138px;
+    --footer-gap: 417px;
+    --header-title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --rec-decor-top: 20px;
+    --rec-decor-right: 29px;
+  }
+}
+
+@media (width >=1024px) {
+  :root {
+    --header-gap: 89px;
+    --footer-gap: 274px;
+  }
 }

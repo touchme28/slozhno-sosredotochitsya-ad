@@ -10,14 +10,13 @@
 
 .header {
   block-size: var(--main-block-size);
-  inline-size: var(--main-inline-size);
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(auto-fit, min-content);
+  grid-template-rows: repeat(5, min-content);
   gap: var(--header-gap); /* отступы между элементами grid сетки */
 
-  margin-block-end: var(--section-margin);
+  /* margin-block-end: var(--section-margin);  */
 }
 
 .header__theme-menu {
@@ -229,7 +228,6 @@
 .footer {
   margin-block-start: var(--section-margin);
   block-size: var(--main-block-size);
-  inline-size: var(--main-inline-size);
 
   display: grid;
   grid-template-columns: 1fr;
@@ -239,7 +237,7 @@
 
 .footer__title {
   justify-self: center;
-  text-shadow: 2px 2px 0 var(--main-title-color);
+  text-shadow: 2px 2px 0 var(--bg-color);
 }
 
 @media (width >= 768px) {

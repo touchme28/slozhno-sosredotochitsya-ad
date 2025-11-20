@@ -7,6 +7,14 @@
   --main-title-color: #FFC2E6;
 }
 
+.theme-light .header__theme-menu-button:hover {
+  outline: 1px solid rgb(53, 52, 48, 0.4)
+}
+
+.theme-light .rec-decor {
+  display: none;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --bg-image: url(../images/cover-image-light.png);
@@ -18,12 +26,3 @@
   }
 }
 
-.theme-light .page {
-  .header__theme-menu-button:hover {
-    outline: 1px solid rgb(53, 52, 48, 0.4)
-  }
-
-  .rec-decor {
-    display: none;
-  }
-}

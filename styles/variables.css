@@ -13,12 +13,11 @@
 
   --bg-image: url(../images/cover-image-dark.png);
 
-  --main-inline-size: 375px;
   --main-block-size: 668px;
 
   --section-margin: 40px;
   --page-padding: 10px;
-  --header-gap: 31px;
+  --header-gap: 48px; /* 31px */
   --footer-gap: 250px;
   --rec-decor-top: 10px;
   --rec-decor-right: 19px;
@@ -26,11 +25,10 @@
 
 @media (width >=768px) {
   :root {
-    --main-inline-size: 768px;
     --main-block-size: 1024px;
     --section-margin:60px;
     --page-padding: 20px;
-    --header-gap: 138px;
+    --header-gap: 150px; /* 138px */
     --footer-gap: 417px;
     --header-title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     --rec-decor-top: 20px;
@@ -40,9 +38,8 @@
 
 @media (width >=1024px) {
   :root {
-    --main-inline-size: 1024px;
     --main-block-size: 768px;
-    --header-gap: 89px;
+    --header-gap: 119px; /* 89px */
     --footer-gap: 274px;
   }
 }

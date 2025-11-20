@@ -1,10 +1,4 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-
-  /* background-color: var(--bg-color); */
-
   background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
@@ -15,56 +9,51 @@
 }
 
 .header {
-  /* block-size: 668px;
-  inline-size: 375px; */
+  block-size: var(--main-block-size);
+  inline-size: var(--main-inline-size);
 
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fit, min-content);
-  gap: var(--header-gap); /* непонятные отступы между элементами grid сетки */
+  gap: var(--header-gap); /* отступы между элементами grid сетки */
 
-  margin-block-end: 40px;
-  /* background-image: var(--bg-image);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; */
+  margin-block-end: var(--section-margin);
 }
 
 .header__theme-menu {
   justify-self: end;
 }
 
-.header__theme-menu-item{
+.header__theme-menu-item {
   font-family: var(--main-font);
   font-weight: 400;
   font-size: var(--main-font-size);
   color: var(--title-color);
 }
 
-.header__theme-menu-list .header__theme-menu-item:not(:last-child){
+.header__theme-menu-list .header__theme-menu-item:not(:last-child) {
   margin-block-end: 10px; /* отсуп между пунктами списка */
 }
 
-.header__theme-menu-button{
+.header__theme-menu-button {
   background-color: transparent;
   border: none;
   text-transform: lowercase;
 }
 
-.header__theme-menu-button:hover{
+.header__theme-menu-button:hover {
   outline: 1px solid rgb(255, 0, 112 , 0.4);
 }
 
-.header__theme-menu-button:focus{
+.header__theme-menu-button:focus {
   outline:none;
 }
 
-.header__theme-menu-button:focus-visible{
+.header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--title-color);
 }
 
-.header__theme-menu-button_active{
+.header__theme-menu-button_active {
   pointer-events: none;
   outline: 1px solid var(--title-color);
 }
@@ -103,7 +92,7 @@
   line-height: 25px;
 }
 
-.rec-decor::before{
+.rec-decor::before {
   content: "rec";
 }
 
@@ -153,7 +142,7 @@
 
 }
 
-.section__block .section__point{
+.section__block .section__point {
   margin-block-end: 10px;
 }
 
@@ -182,11 +171,11 @@
   text-decoration: underline;
 }
 
-.section__link:focus{
+.section__link:focus {
   outline:none;
 }
 
-.section__link:focus-visible{
+.section__link:focus-visible {
   outline: 1px solid currentColor;
 }
 
@@ -215,7 +204,7 @@
   gap:20px;
 }
 
-.section__how .section__block .section__point{
+.section__how .section__block .section__point {
   font-weight: 400;
 }
 
@@ -238,14 +227,14 @@
 }
 
 .footer {
-  margin-block-start: 40px;
-  block-size: 100%;
-  inline-size: 100%;
+  margin-block-start: var(--section-margin);
+  block-size: var(--main-block-size);
+  inline-size: var(--main-inline-size);
 
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, min-content);
-  gap: var(--footer-gap); /* непонятные отступы между элементами grid сетки */
+  gap: var(--footer-gap); /* отступы между элементами grid сетки */
 }
 
 .footer__title {
@@ -254,12 +243,6 @@
 }
 
 @media (width >= 768px) {
-  /* .header {
-    block-size: 1024px;
-    inline-size: 768px;
-    gap: 100px;
-  } */
-
   .header__title {
     margin-left: -20px;
   }
@@ -301,7 +284,7 @@
     gap: 20px;
   }
 
-  .sunset{
+  .sunset {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row: span 1;

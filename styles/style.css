@@ -6,7 +6,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 0 var(--page-padding);
+  /* padding: 0 var(--page-padding); */
+  padding-inline: var(--page-padding);
 }
 
 .header {

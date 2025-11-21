@@ -15,10 +15,13 @@
 
   --main-block-size: 668px;
 
-  --section-margin: 40px;
+  --margin-for-header-and-footer: 40px;
+  --margin-for-sections: 50px;
+  --margin-for-pictures-section: 10px;
   --page-padding: 10px;
-  --header-gap: 53px; /* 31px */
+  --header-gap: 53px;
   --footer-gap: 250px;
+  --section-gap: 20px;
   --rec-decor-top: 10px;
   --rec-decor-right: 19px;
 }
@@ -26,9 +29,11 @@
 @media (width >=768px) {
   :root {
     --main-block-size: 1024px;
-    --section-margin:60px;
+    --margin-for-header-and-footer:60px;
+    --margin-for-sections: 80px;
+    --margin-for-pictures-section: 20px;
     --page-padding: 20px;
-    --header-gap: 162px; /* 138px */
+    --header-gap: 155px;
     --footer-gap: 417px;
     --header-title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     --rec-decor-top: 20px;
@@ -39,7 +44,7 @@
 @media (width >=1024px) {
   :root {
     --main-block-size: 768px;
-    --header-gap: 130px; /* 89px */
+    --header-gap: 130px;
     --footer-gap: 310px;
   }
 }
